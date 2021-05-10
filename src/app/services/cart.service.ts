@@ -26,8 +26,17 @@ export class CartService {
 	list(): CartItem[] {
 		return CartItems;
 	}
-	removeFromcart(product:Product){
-		let item:CartItem = CartItems.find(c => c.product.productId === product.productId);
-		CartItems.splice(CartItems.indexOf(item),1);
+	removeFromCart(product: Product) {
+		let item: CartItem = CartItems.find(c => c.product.productId === product.productId);
+		CartItems.splice(CartItems.indexOf(item), 1);
+	}
+	popFromCart(product: Product) {
+		let item: CartItem = CartItems.find(c => c.product.productId === product.productId);
+		if (item.quantity == 1) {
+			this.removeFromCart(product)
+		}
+		else {
+			item.quantity += -1;
+		}
 	}
 }

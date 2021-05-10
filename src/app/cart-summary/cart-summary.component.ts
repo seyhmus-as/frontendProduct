@@ -22,7 +22,11 @@ export class CartSummaryComponent implements OnInit {
 		this.cartItems = this.cartService.list();
 	}
 	removeFromCar(product:Product){
-		this.cartService.removeFromcart(product);
+		this.cartService.removeFromCart(product);
 		this.toastrService.error("Silindi",product.productName + " sepetten silindi.")
+	}
+	popFromCar(product:Product){
+		this.cartService.popFromCart(product);
+		this.toastrService.success("azaltıldı",product.productName + " sepetten bir tane çıkarıldı.")
 	}
 }

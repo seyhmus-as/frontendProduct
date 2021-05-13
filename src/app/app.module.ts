@@ -13,8 +13,8 @@ import { FilterPipePipe } from './pipes/filter-pipe.pipe';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations"
 
 import { ToastrModule } from "ngx-toastr";
-import { CartSummaryComponent } from './cart-summary/cart-summary.component';
-import { ProductAddComponent } from './components/product-add/product-add.component'
+import { CartSummaryComponent } from './components/cart-summary/cart-summary.component';
+import { ProductAddComponent } from './components/product-add/product-add.component';
 
 @NgModule({
 	declarations: [
